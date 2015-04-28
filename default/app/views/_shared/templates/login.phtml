@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="utf-8" />
+    <title>Inicio de sesión - Facturación Comfa</title>
+
+    <meta name="description" content="User login page" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <!-- bootstrap & fontawesome -->
+    <?php Tag::css('bootstrap') ?>
+    <?php Tag::css('font-awesome') ?>
+
+    <!-- text fonts -->
+    <?php Tag::css('ace-fonts') ?>
+
+    <!-- ace styles -->
+    <?php Tag::css('ace') ?>
+
+    <!--[if lte IE 9]>
+      <?php Tag::css('ace-part2') ?>
+    <![endif]-->
+
+    <?php Tag::css('ace-rtl') ?>
+
+    <!--[if lte IE 9]>
+      <?php Tag::css('ace-ie') ?>
+    <![endif]-->
+
+    <?php echo Html::includeCss() ?>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+    <!--[if lt IE 9]>
+    <script src="../assets/js/html5shiv.js"></script>
+    <script src="../assets/js/respond.js"></script>
+    <![endif]-->
+  </head>
+  <body class="login-layout">
+    <div class="main-container">
+      <div class="main-content">
+        <div class="row">
+          <div class="col-sm-10 col-sm-offset-1">
+            <div class="login-container">
+              <div class="center">
+                <h1>
+                  <i class="ace-icon fa fa-leaf green"></i>
+                  <span class="red">Ace</span>
+                  <span class="white" id="id-text2">Facturación</span>
+                </h1>
+                <h4 class="blue" id="id-company-text">&copy; Comfamiliar Nariño</h4>
+              </div>
+
+              <div class="space-6"></div>
+
+              <div class="position-relative">
+                <?php View::content(); ?>
+              </div><!-- /.position-relative -->
+
+              <!-- <div class="navbar-fixed-top align-right">
+                <br />
+                &nbsp;
+                <a id="btn-login-dark" href="#">Dark</a>
+                &nbsp;
+                <span class="blue">/</span>
+                &nbsp;
+                <a id="btn-login-blur" href="#">Blur</a>
+                &nbsp;
+                <span class="blue">/</span>
+                &nbsp;
+                <a id="btn-login-light" href="#">Light</a>
+                &nbsp; &nbsp; &nbsp;
+              </div> -->
+            </div>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.main-content -->
+    </div><!-- /.main-container -->
+  </body>
+</html>
