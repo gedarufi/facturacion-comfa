@@ -59,6 +59,11 @@ class AuthController extends AppController
     }
   }
 
+  public function logout() {
+    Auth::destroy_identity();
+    Router::redirect("auth/login");
+  }
+
   public function after_filter() {
     View::template("login");
   }
