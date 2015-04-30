@@ -1,0 +1,16 @@
+*1.  Terceros (Proveedores, Clientes)             = Roland / Karina
+*2.  Articulos                                    = Bravo / Ricardo
+*3.  Impuestos                                    = Bravo / Ricardo
+*4.  Sucursales                                   = Fabian
+
+*5.  Linea (Articulos)                            = Vela
+*6.  SubLinea (Articulos)                         = Henry
+*7.  Caja                                         = Fabian
+
+*8.  Factura de venta                             = Todos
+9.  Factura de compra                            = Todos
+10. Caja (Arqueos, cierre de caja, etc)          = Chamorro
+11. Devoluciones (Compra y Venta)                = Vela / Henry
+12. Reportes (Existencias, Kardex, Compras, etc) = Todos
+*13. Usuarios                                     = ****
+14. Formas de pago
