@@ -1,0 +1,117 @@
+<div class="row">
+  <div class="col-xs-12">
+    <h3 class="header smaller lighter blue">Listado de impuestos</h3>
+
+    <div class="clearfix">
+      <div class="pull-right tableTools-container"></div>
+    </div>
+
+    <a class="btn btn-primary btn-grid-editar" data-texto-boton="Crear"
+      href="<?php echo PUBLIC_PATH ?>catalogos/impuestos/nuevo">
+      <i class="glyphicon glyphicon-plus"></i>&nbsp;Nuevo Impuesto
+    </a><br><br>
+    <div class="table-header">
+      Listado de impuestos
+    </div>
+
+    <!-- div.table-responsive -->
+
+    <!-- div.dataTables_borderWrap -->
+    <div>
+      <table id="dynamic-table" class="table table-striped table-bordered table-hover">
+        <thead>
+          <tr>
+            <th class="center">
+              <label class="pos-rel">
+                <input type="checkbox" class="ace" />
+                <span class="lbl"></span>
+              </label>
+            </th>
+            <th>Código</th>
+            <th>Descripción</th>
+            <th class="hidden-480">Porcentaje</th>
+
+            <th>
+              <i class="ace-icon fa fa-clock-o bigger-110 hidden-480"></i>
+              Cuenta
+            </th>
+
+            <th></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <?php foreach ($impuestos as $imp): ?>
+            <tr>
+              <td class="center">
+                <label class="pos-rel">
+                  <input type="checkbox" class="ace" />
+                  <span class="lbl"></span>
+                </label>
+              </td>
+              <td><?php echo $imp->codigo ?></td>
+              <td><?php echo $imp->descripcion ?></td>
+              <td><?php echo $imp->porcentaje ?></td>
+              <td><?php echo $imp->cuenta ?></td>
+              <td>
+                <div class="hidden-sm hidden-xs action-buttons">
+                  <a class="blue" href="#">
+                    <i class="ace-icon fa fa-search-plus bigger-130"></i>
+                  </a>
+
+                  <a class="green btn-grid-editar" data-texto-boton="Guardar" href="<?php echo PUBLIC_PATH ?>catalogos/impuestos/editar/<?php echo $imp->id ?>">
+                    <i class="ace-icon fa fa-pencil bigger-130"></i>
+                  </a>
+
+                  <a class="red btn-grid-editar" data-texto-boton="Eliminar"
+                  href="<?php echo PUBLIC_PATH ?>catalogos/impuestos/eliminar/<?php echo $imp->id ?>">
+                    <i class="ace-icon fa fa-trash-o bigger-130"></i>
+                  </a>
+                </div>
+
+                <div class="hidden-md hidden-lg">
+                  <div class="inline pos-rel">
+                    <button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                      <i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
+                    </button>
+
+                    <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+                      <li>
+                        <a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+                          <span class="blue">
+                            <i class="ace-icon fa fa-search-plus bigger-120"></i>
+                          </span>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="<?php echo PUBLIC_PATH ?>catalogos/impuestos/editar/<?php echo $imp->id ?>" class="tooltip-success btn-grid-editar" data-rel="tooltip" data-texto-boton="Editar" title="Edit">
+                          <span class="green">
+                            <i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+                          </span>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="<?php echo PUBLIC_PATH ?>catalogos/impuestos/eliminar/<?php echo $imp->id ?>" 
+                        class="tooltip-error btn-grid-editar" data-rel="tooltip" data-texto-boton="Eliminar" title="Delete">                        
+                          <span class="red">
+                            <i class="ace-icon fa fa-trash-o bigger-120"></i>
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          <?php endforeach ?>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div id="dialog-message" class="hide">
+  <div id="dialog-container"></div>
+</div><!-- #dialog-message -->
